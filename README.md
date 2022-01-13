@@ -18,7 +18,7 @@ cd modules
 mkdir modules && cd modules
 
 # Clone this repo to modules directory
-git clone https://github.com/ajshortt/nuxt-datocms.git
+git clone https://github.com/StudioRotate/nuxt-datocms.git
 ```
 
 2. Add `nuxt-datocms` to the `modules` section of `nuxt.config.js`
@@ -65,7 +65,7 @@ await this.$cms.raw(`query {
 ```
 
 ## Documentation
-For all configuration, further setup and usage information, please read the [Plugin Docs](https://https://github.com/ajshortt/nuxt-datocms/docs/index.md).
+For all configuration, further setup and usage information, please read the [Plugin Docs](https://github.com/StudioRotate/nuxt-datocms/blob/main/docs/index.md).
 
 ## Development
 

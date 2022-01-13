@@ -2,7 +2,7 @@
 
 ## Simple installation
 
-For basic setup, follow the initial setup found in the plugin [README](https://github.com/ajshortt/nuxt-datocms#setup).
+For basic setup, follow the initial setup found in the plugin [README](https://github.com/StudioRotate/nuxt-datocms/blob/main/README.md#setup).
 
 ## Configurations
 You can the following config options to the plugin via the `options` object in `nuxt.config.js` e.g

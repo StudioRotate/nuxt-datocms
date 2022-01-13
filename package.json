@@ -1,5 +1,5 @@
 {
-  "name": "@ajshortt/nuxt-datocms",
+  "name": "@StudioRotate/nuxt-datocms",
   "version": "1.0.0",
   "description": "NuxtJS plugin that creates a clean and elegant way to fetch data from DatoCMS.",
   "main": "module.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ajshortt/nuxt-datocms.git"
+    "url": "git+https://github.com/StudioRotate/nuxt-datocms.git"
   },
   "keywords": [
     "DatoCMS",
@@ -16,10 +16,10 @@
     "Plugin",
     "Module"
   ],
-  "author": "@ajshortt",
+  "author": "@StudioRotate",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ajshortt/nuxt-datocms/issues"
+    "url": "https://github.com/StudioRotate/nuxt-datocms/issues"
   },
-  "homepage": "https://github.com/ajshortt/nuxt-datocms#readme"
+  "homepage": "https://github.com/StudioRotate/nuxt-datocms#readme"
 }
