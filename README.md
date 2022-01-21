@@ -1,14 +1,16 @@
 # Nuxt DatoCMS Plugin
 
-NuxtJS plugin that creates a clean and elegant way to fetch data from DatoCMS.
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
 
-## Contents
+> NuxtJS plugin that creates a clean and elegant way to fetch data from DatoCMS.
+
+[📖 **Release Notes**](./CHANGELOG.md)
 
 ## Setup
 
-1. Add `nuxt-datocms` dependency to your project
-
-~~Add install dependency via Yarn/NPM~~ COMING SOON
+1. Add `@ajshortt/nuxt-datocms` dependency to your project
 
 ```bash
 # Navigate to modules directory of Nuxt project
@@ -30,7 +32,7 @@ git clone https://github.com/StudioRotate/nuxt-datocms.git
     // Simple usage
     ['nuxt-datocms', {
       options: {
-        datoToken: 'xyz' // Add Dato API token
+        datoToken: <DATO-API-TOKEN> // Add Dato API token
       }
     }]
   ]
@@ -46,35 +48,58 @@ Or a separate section `nuxt-datocms` for module options:
     // Simple usage
     'nuxt-datocms',
   ],
-  nuxtDatoCms: {
+  'nuxt-datocms': {
     options: {
-      datoToken: 'xyz' // Add Dato API token
+      datoToken: <DATO-API-TOKEN> // Add Dato API token
     }
   }
 }
 ```
 
-3. Test fetching data from DatoCMS
+3. Test fetching data from DatoCMS within a page's `asyncData` lifecycle method.
 
 ```js
-await this.$cms.raw(`query {
-  _site {
-    locales
-  }
-}`);
+async asyncData({ $cms }) {
+  const data = await $cms.records.fetchRaw(`query {
+    _site {
+      locales
+    }
+  }`)
+  console.log(data)
+}
+```
+## Documentation
+
+For all configuration, further setup and usage information, please do the following
+
+Move to the `docs` directory:
+
+```bash
+cd docs
 ```
 
-## Documentation
-For all configuration, further setup and usage information, please read the [Plugin Docs](https://github.com/StudioRotate/nuxt-datocms/blob/main/docs/index.md).
+Install dependencies and start the project in development mode:
+
+```bash
+yarn && yarn dev
+```
 
 ## Development
 
-1. Creat a fork of this repository and clone it into a local `modules` directory
+1. Clone this repository
 2. Install dependencies using `yarn install` or `npm install`
-3. Start development.
-4. Create pull request from forked repo into the original repo
-5. Raise a github issue with a description of your changes and a link to the PR
+3. Start development server using `npm run dev`
 
 ## License
 
 [MIT License](./LICENSE)
+
+Copyright (c) Alex Shortt <hello@alex-shortt.com>
+
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/v/@ajshortt/nuxt-datocms/latest.svg
+[npm-version-href]: https://npmjs.com/package/@ajshortt/nuxt-datocms
+[npm-downloads-src]: https://img.shields.io/npm/dt/@ajshortt/nuxt-datocms.svg
+[npm-downloads-href]: https://npmjs.com/package/@ajshortt/nuxt-datocms
+[license-src]: https://img.shields.io/npm/l/@ajshortt/nuxt-datocms.svg
+[license-href]: https://github.com/ajshortt/nuxt-datocms/blob/main/LICENSE
